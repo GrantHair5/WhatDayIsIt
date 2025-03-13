@@ -27,14 +27,14 @@
         color: magenta;
         font-size: 100px;
       }
-      audio {
-        display: none;
-      }
     </style>
   </head>
   <body>
     <h1>Chris, it is:</h1>
     <h2 id="day"></h2>
+    <audio controls id="theme">
+      <source src="theme.mp3" type="audio/mpeg" />
+    </audio>
     <script>
       const weekday = [
         "Sunday",
@@ -49,10 +49,7 @@
       const d = new Date();
       const day = weekday[d.getDay()];
       document.getElementById("day").innerText = day;
+      document.getElementById("theme").play();
     </script>
-
-    <audio controls autoplay>
-      <source src="theme.mp3" type="audio/mpeg" />
-    </audio>
   </body>
 </html>
