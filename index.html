@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale = 1.0"
+    />
     <title>What day is it?</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,17 +24,59 @@
       h1 {
         color: aquamarine;
         font-size: 150px;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+          1px 1px 0 #000;
+        margin-top: 175px;
       }
 
       h2 {
-        color: magenta;
+        color: yellow;
         font-size: 100px;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+          1px 1px 0 #000;
+      }
+
+      audio::-webkit-media-controls-panel {
+        background-color: magenta;
+      }
+
+      audio::-webkit-media-controls-play-button {
+        background-color: aquamarine;
+        border-radius: 50%;
+      }
+
+      audio::-webkit-media-controls-play-button:hover {
+        background-color: rgba(177, 212, 224, 0.7);
+      }
+
+      audio::-webkit-media-controls-time-remaining-display {
+        color: yellow;
+      }
+      audio::-webkit-media-controls-current-time-display {
+        color: yellow;
+      }
+
+      audio::-webkit-media-controls-timeline {
+        background-color: orange;
+        border-radius: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      audio::-webkit-media-controls-volume-slider {
+        background-color: aquamarine;
+        border-radius: 25px;
+        padding-left: 8px;
+        padding-right: 8px;
       }
     </style>
   </head>
   <body>
-    <h1>Chris, it is:</h1>
-    <h2 id="day"></h2>
+    <h1>
+      Chris, <span style="color: magenta">it</span>
+      <span style="color: orange">is:</span>
+    </h1>
+    <h2 id="day" style="margin-top: 200px"></h2>
     <audio controls id="theme">
       <source src="theme.mp3" type="audio/mpeg" />
     </audio>
