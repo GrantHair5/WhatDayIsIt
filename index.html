@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What day is it?</title>
+
+    <style>
+      body {
+        background-image: url("3.webp");
+      }
+
+      h2 {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chris, it is:</h1>
+    <h2 id="day"></h2>
+    <script>
+      const weekday = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      const d = new Date();
+      const day = weekday[d.getDay()];
+      document.getElementById("day").innerText = day;
+    </script>
+  </body>
+</html>
